@@ -1,0 +1,492 @@
+[gd_scene load_steps=65 format=3 uid="uid://b62g6mkjugi1e"]
+
+[ext_resource type="Script" path="res://Scripts/Game.cs" id="1_3gakx"]
+[ext_resource type="Script" path="res://Scripts/MouseAutoHider.cs" id="2_anx1d"]
+[ext_resource type="Texture2D" uid="uid://cub64rkd4cynv" path="res://Black.png" id="2_ypjq3"]
+[ext_resource type="Script" path="res://Scripts_UI/Loading_Label.cs" id="4_q00l3"]
+[ext_resource type="Script" path="res://Scripts_UI/Reset_ConfirmationDialog.cs" id="5_w5dvt"]
+[ext_resource type="Texture2D" uid="uid://wrdke8bvy4n4" path="res://Icons/icons8-back-50.png" id="6_8lfkg"]
+[ext_resource type="Script" path="res://Scripts_UI/ApiKey_Window.cs" id="6_84f8x"]
+[ext_resource type="Script" path="res://Scripts_UI/Prompt_Window.cs" id="7_hli2s"]
+[ext_resource type="Script" path="res://Scripts_UI/Start_Button.cs" id="8_3xff2"]
+[ext_resource type="Texture2D" uid="uid://0ahh0jovpo8g" path="res://Icons/icons8-pause-50.png" id="8_stn8s"]
+[ext_resource type="Script" path="res://Scripts_UI/Bar_MarginContainer.cs" id="9_elgjv"]
+[ext_resource type="Theme" uid="uid://dcgm5meb0p4vu" path="res://Theme.tres" id="10_1sbsf"]
+[ext_resource type="Texture2D" uid="uid://dqfv1riedds6l" path="res://Icons/icons8-next-50.png" id="10_juj3j"]
+[ext_resource type="Script" path="res://Scripts_UI/Back_Button.cs" id="11_vb876"]
+[ext_resource type="Texture2D" uid="uid://ct108awfhepac" path="res://Icons/icons8-save-50.png" id="12_cm0nb"]
+[ext_resource type="Script" path="res://Scripts_UI/Pause_Button.cs" id="13_neop6"]
+[ext_resource type="Texture2D" uid="uid://kxkvt0t6dcaq" path="res://Icons/icons8-reload-50.png" id="14_me7kr"]
+[ext_resource type="Script" path="res://Scripts_UI/Next_Button.cs" id="15_w23w0"]
+[ext_resource type="Texture2D" uid="uid://cuwmsdhctib2y" path="res://Icons/icons8-open-folder-in-new-tab-50.png" id="16_03dgk"]
+[ext_resource type="Texture2D" uid="uid://clej151xay1g8" path="res://Icons/icons8-reset-50.png" id="17_cpfol"]
+[ext_resource type="Script" path="res://Scripts_UI/Save_Button.cs" id="17_gwqtr"]
+[ext_resource type="Texture2D" uid="uid://bte0vd1t5r5fv" path="res://Icons/icons8-edit-property-50.png" id="18_1tluo"]
+[ext_resource type="Script" path="res://Scripts_UI/Reload_Button.cs" id="19_s72u6"]
+[ext_resource type="Texture2D" uid="uid://rn7wli82k14c" path="res://Icons/icons8-hide-50.png" id="20_4vgbc"]
+[ext_resource type="Script" path="res://Scripts_UI/Reset_Button.cs" id="21_4va38"]
+[ext_resource type="Texture2D" uid="uid://dwmk0uevtwxu2" path="res://Icons/icons8-fit-to-width-50.png" id="22_ux2mb"]
+[ext_resource type="Script" path="res://Scripts_UI/Open_Button.cs" id="23_oyhdt"]
+[ext_resource type="Texture2D" uid="uid://20k2nstlx527" path="res://Icons/icons8-quit-50.png" id="24_pvk0u"]
+[ext_resource type="Script" path="res://Scripts_UI/Prompt_Button.cs" id="25_7xax2"]
+[ext_resource type="Script" path="res://Scripts_UI/AutoHide_Button.cs" id="27_geanv"]
+[ext_resource type="Script" path="res://Scripts_UI/FullScreen_Button.cs" id="29_ieaqi"]
+[ext_resource type="Script" path="res://Scripts_UI/Exit_Button.cs" id="31_60yj0"]
+[ext_resource type="Script" path="res://Scripts_UI/Lewd_HSlider.cs" id="32_wk1bx"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_more1"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_rggfh"]
+events = [SubResource("InputEventKey_more1")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_p4n07"]
+device = -1
+keycode = 4194319
+
+[sub_resource type="InputEventKey" id="InputEventKey_jiwom"]
+device = -1
+keycode = 81
+unicode = 113
+
+[sub_resource type="Shortcut" id="Shortcut_f6v17"]
+events = [SubResource("InputEventKey_p4n07"), SubResource("InputEventKey_jiwom")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_qvyhd"]
+device = -1
+keycode = 32
+unicode = 32
+
+[sub_resource type="InputEventKey" id="InputEventKey_hpscy"]
+device = -1
+keycode = 4194322
+
+[sub_resource type="InputEventKey" id="InputEventKey_aume6"]
+device = -1
+keycode = 4194313
+
+[sub_resource type="Shortcut" id="Shortcut_spll0"]
+events = [SubResource("InputEventKey_qvyhd"), SubResource("InputEventKey_hpscy"), SubResource("InputEventKey_aume6")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_fntwm"]
+device = -1
+keycode = 4194321
+
+[sub_resource type="InputEventKey" id="InputEventKey_hhi0j"]
+device = -1
+keycode = 69
+unicode = 101
+
+[sub_resource type="Shortcut" id="Shortcut_neu03"]
+events = [SubResource("InputEventKey_fntwm"), SubResource("InputEventKey_hhi0j")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_rijkc"]
+device = -1
+keycode = 83
+unicode = 115
+
+[sub_resource type="Shortcut" id="Shortcut_wc5ax"]
+events = [SubResource("InputEventKey_rijkc")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_qx68q"]
+device = -1
+keycode = 74
+unicode = 106
+
+[sub_resource type="Shortcut" id="Shortcut_l4yd3"]
+events = [SubResource("InputEventKey_qx68q")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_pgpgi"]
+device = -1
+keycode = 82
+unicode = 114
+
+[sub_resource type="Shortcut" id="Shortcut_820ra"]
+events = [SubResource("InputEventKey_pgpgi")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_o134h"]
+device = -1
+keycode = 79
+unicode = 111
+
+[sub_resource type="Shortcut" id="Shortcut_id0mq"]
+events = [SubResource("InputEventKey_o134h")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ksb74"]
+device = -1
+keycode = 80
+unicode = 112
+
+[sub_resource type="Shortcut" id="Shortcut_38e01"]
+events = [SubResource("InputEventKey_ksb74")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ceksm"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="InputEventKey" id="InputEventKey_8hxnd"]
+device = -1
+keycode = 72
+unicode = 104
+
+[sub_resource type="Shortcut" id="Shortcut_ykp6k"]
+events = [SubResource("InputEventKey_ceksm"), SubResource("InputEventKey_8hxnd")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_1385w"]
+device = -1
+keycode = 70
+unicode = 102
+
+[sub_resource type="InputEventKey" id="InputEventKey_hmg7t"]
+device = -1
+keycode = 4194342
+
+[sub_resource type="Shortcut" id="Shortcut_bmyq1"]
+events = [SubResource("InputEventKey_1385w"), SubResource("InputEventKey_hmg7t")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_nkv83"]
+keycode = 4194305
+
+[sub_resource type="InputEventKey" id="InputEventKey_fbtam"]
+keycode = 88
+
+[sub_resource type="Shortcut" id="Shortcut_jx8m6"]
+events = [SubResource("InputEventKey_nkv83"), SubResource("InputEventKey_fbtam")]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_3gakx")
+
+[node name="MouseAutoHider_Script" type="Node2D" parent="."]
+script = ExtResource("2_anx1d")
+
+[node name="HTTPRequest_Image" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest_Test" type="HTTPRequest" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background_TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_repeat = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("2_ypjq3")
+
+[node name="Loading_Label" type="Label" parent="CanvasLayer"]
+offset_right = 26.0
+offset_bottom = 26.0
+rotation = -6.28319
+pivot_offset = Vector2(12.4, 15)
+text = "|"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_q00l3")
+
+[node name="Image_TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_repeat = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Reset_ConfirmationDialog" type="ConfirmationDialog" parent="CanvasLayer"]
+title = ""
+initial_position = 1
+size = Vector2i(234, 100)
+popup_window = true
+dialog_text = "Reset config.json to default?"
+script = ExtResource("5_w5dvt")
+
+[node name="ApiKey_Window" type="Window" parent="CanvasLayer"]
+initial_position = 1
+size = Vector2i(700, 100)
+visible = false
+min_size = Vector2i(100, 65)
+script = ExtResource("6_84f8x")
+
+[node name="ApiKey_Label" type="Label" parent="CanvasLayer/ApiKey_Window"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "NovelAI Api Key: "
+
+[node name="ApiKey_TextEdit" type="TextEdit" parent="CanvasLayer/ApiKey_Window"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 25.0
+offset_bottom = 60.0
+grow_horizontal = 2
+placeholder_text = "pst-********"
+wrap_mode = 1
+
+[node name="ApiKey_Button" type="Button" parent="CanvasLayer/ApiKey_Window"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 68.0
+offset_bottom = 99.0
+grow_horizontal = 2
+text = "Test/Submit API Key"
+
+[node name="Prompt_Window" type="Window" parent="CanvasLayer"]
+initial_position = 1
+size = Vector2i(500, 300)
+visible = false
+transient = true
+exclusive = true
+popup_window = true
+min_size = Vector2i(100, 65)
+script = ExtResource("7_hli2s")
+
+[node name="Prompt_TextEdit" type="TextEdit" parent="CanvasLayer/Prompt_Window"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_bottom = -2.0
+grow_horizontal = 2
+placeholder_text = "[ Prompt ]"
+editable = false
+wrap_mode = 1
+
+[node name="Undesired_TextEdit" type="TextEdit" parent="CanvasLayer/Prompt_Window"]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "[ Undesired Content ]"
+editable = false
+wrap_mode = 1
+
+[node name="Start_Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -15.5
+offset_right = 9.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Start
+( Shortcuts: Enter )
+
+If disabled: the test API failed.
+Causes:
+	1. NovelAI or its API down.
+	2. API key is invalid. Update the value and reload the config.json ( Shortcut: J ) or the app.
+	3. A bug happened or something ¯\\_(ツ)_/¯ check the user directory log file."
+theme = ExtResource("10_1sbsf")
+disabled = true
+shortcut = SubResource("Shortcut_rggfh")
+shortcut_in_tooltip = false
+text = "Start"
+script = ExtResource("8_3xff2")
+
+[node name="Bar_MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+mouse_filter = 0
+script = ExtResource("9_elgjv")
+
+[node name="Bar_VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Bar_MarginContainer"]
+layout_mode = 2
+
+[node name="TopBar_MarginContainer" type="MarginContainer" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer"]
+layout_mode = 2
+
+[node name="TopCenter_HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Back_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopCenter_HBoxContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Last Image
+( Shortcuts: Left, Q )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+disabled = true
+shortcut = SubResource("Shortcut_f6v17")
+shortcut_in_tooltip = false
+icon = ExtResource("6_8lfkg")
+expand_icon = true
+script = ExtResource("11_vb876")
+
+[node name="Pause_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopCenter_HBoxContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Pause
+( Shortcuts: Space, Down, Pause )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+disabled = true
+toggle_mode = true
+shortcut = SubResource("Shortcut_spll0")
+shortcut_in_tooltip = false
+icon = ExtResource("8_stn8s")
+expand_icon = true
+script = ExtResource("13_neop6")
+
+[node name="Next_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopCenter_HBoxContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Next Image
+( Shortcuts: Right, E )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+disabled = true
+shortcut = SubResource("Shortcut_neu03")
+shortcut_in_tooltip = false
+icon = ExtResource("10_juj3j")
+expand_icon = true
+script = ExtResource("15_w23w0")
+
+[node name="TopRight_HBoxContaine" type="HBoxContainer" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Save_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Save Current Image (with metadata)
+( Shortcuts: S )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+shortcut = SubResource("Shortcut_wc5ax")
+shortcut_in_tooltip = false
+icon = ExtResource("12_cm0nb")
+expand_icon = true
+script = ExtResource("17_gwqtr")
+
+[node name="Reload_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Reload config.json
+( Shortcuts: J )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+shortcut = SubResource("Shortcut_l4yd3")
+shortcut_in_tooltip = false
+icon = ExtResource("14_me7kr")
+expand_icon = true
+script = ExtResource("19_s72u6")
+
+[node name="Reset_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Reset config.json to default
+( Shortcuts: R )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+shortcut = SubResource("Shortcut_820ra")
+shortcut_in_tooltip = false
+icon = ExtResource("17_cpfol")
+expand_icon = true
+script = ExtResource("21_4va38")
+
+[node name="Open_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Open user directory
+( Shortcuts: O )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+shortcut = SubResource("Shortcut_id0mq")
+shortcut_in_tooltip = false
+icon = ExtResource("16_03dgk")
+expand_icon = true
+script = ExtResource("23_oyhdt")
+
+[node name="Prompt_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Open Prompt & Undesired Content Window
+( Shortcuts: P )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+shortcut = SubResource("Shortcut_38e01")
+shortcut_in_tooltip = false
+icon = ExtResource("18_1tluo")
+expand_icon = true
+script = ExtResource("25_7xax2")
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+modulate = Color(1, 1, 1, 0.0980392)
+layout_mode = 2
+theme = ExtResource("10_1sbsf")
+
+[node name="AutoHide_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Toggle Menu AutoHide
+( Shortcuts: A, H )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+toggle_mode = true
+shortcut = SubResource("Shortcut_ykp6k")
+shortcut_in_tooltip = false
+icon = ExtResource("20_4vgbc")
+expand_icon = true
+script = ExtResource("27_geanv")
+
+[node name="FullScreen_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Toggle FullScreen Mode
+( Shortcuts: F, F11 )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+toggle_mode = true
+shortcut = SubResource("Shortcut_bmyq1")
+shortcut_in_tooltip = false
+icon = ExtResource("22_ux2mb")
+expand_icon = true
+script = ExtResource("29_ieaqi")
+
+[node name="Exit_Button" type="Button" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer/TopBar_MarginContainer/TopRight_HBoxContaine"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Exit to Desktop
+( Shortcuts: Escape, X )"
+mouse_filter = 1
+theme = ExtResource("10_1sbsf")
+shortcut = SubResource("Shortcut_jx8m6")
+shortcut_in_tooltip = false
+icon = ExtResource("24_pvk0u")
+expand_icon = true
+script = ExtResource("31_60yj0")
+
+[node name="Lewd_HSlider" type="HSlider" parent="CanvasLayer/Bar_MarginContainer/Bar_VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+tooltip_text = "Lewd Timer"
+mouse_filter = 1
+step = 0.0
+allow_greater = true
+editable = false
+tick_count = 11
+script = ExtResource("32_wk1bx")
