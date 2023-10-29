@@ -1,3 +1,4 @@
+
 # NAI Prog
 Short for **N**ovel**AI** Diffusion **Prog**ressively More Lewd Automated Image Generator, the name speaks for itself. If you're familiar with coding and prompting, viewing the [`config.json`](config.json) self-explains most of the [Functionality](#functionality).
 
@@ -24,7 +25,7 @@ Short for **N**ovel**AI** Diffusion **Prog**ressively More Lewd Automated Image 
 Going forward, the code tag (`example text`) is heavily used when referencing attributes present in the [`config.json`](config.json) file.
 
 ## API Payload
-The base API payload is visible at the bottom of the [`config.json`](config.json) file. To assuredly modify values (such as `model` name): open the NovelAI image generator website in the browser, select your preferred image and model settings, open the Developer Tools (F12?), open the Network tab, and generate an image using normal means. The Network tab will add a line with the name `/api/generate-image` (or just `generate-image`), select that API call, select the `Payload` tab, and copy desired values to the `config.json`.
+The base API payload is visible at the bottom of the [`config.json`](config.json) file. To assuredly modify values (such as `model` name): open the NovelAI image generator website in the browser, select your preferred image and model settings, open the Developer Tools (F12?), open the Network tab, and generate an image using normal means. The Network tab will add a line with the name `/api/generate-image` (or just `generate-image`), select that API call, select the Payload tab, and copy desired values to the `config.json`.
 
 Do not modify the `%INPUT_PROMPT%`, `%NEGATIVE_PROMPT%` and `seed` values as these 3 are dynamically updated during each image generation, explanation provided below.
 
@@ -35,7 +36,7 @@ When a random **Lewd** value offset is being rolled, how much it can deviate is 
 ## Selecting Prompt and Undesired Content
 The following is the functionality used when constructing the dynamic values of the API payload for image generation:
 * Select a random `Characters` (with equal probability).
-* Generate the **Prompt**: `Quality`, `Style`, selected `Characters`'s `Prompt`, random `Mood`, random `Scenery`, and lastly `Pose` + `Outfit` + `OutfitMod` `Prompt`s with each being selected based on the current **Lewd** value, with an offset.
+* Generate the **Prompt**: `Quality`, `Style`, selected `Characters`'s `Prompt`, random `Mood`, random `Scenery` with random `Variant`, and lastly `Pose` + `Outfit` + `OutfitMod` `Prompt`s with each being selected based on the current **Lewd** value, with an offset.
 * Generate the **Undesired Content**: `UndesiredContentPreset`, selected `Characters`'s `UndesiredContent`, and `UndesiredContent`.
 * Select a random **seed** number.
 
@@ -47,6 +48,8 @@ Modifying the `Quality` and `UndesiredContentPreset` attributes is the same as t
 
 A random `Mood`, `Scenery`, `Pose`, and `Outfit` is added to the **Prompt** each image generation.
 The `Pose`, `Outfit`, and `OutfitMod` uses the **Lewd** value to bias which value to select. Each one rolls a *unique* random offset from the current **Lewd** value to increase variety.
+
+`Scenery`s and `Pose`s feature `Variants`, where the base `Prompt` is appended with a randomly selected `Variants`. For `Pose`s, the base `Pose` `Lewd` + `Variants`' `Lewd` are combined when determining what `Pose`s are in the **Lewd** value range.
 
 The "Btm", "Top", and "Non" `Type`s are for compatibility (abbr. for Bottom, Top, and None). Examples: a `Pose` for "shirt pull" should `Req`uire a "Top" `Outfit` to be selected. A `Pose` involving partial nudity should have the respective portion `Ban`ned, or even `Req` = "Non" if full nudity is required.
 

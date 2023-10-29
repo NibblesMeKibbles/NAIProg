@@ -1,5 +1,6 @@
 using Godot;
 using Godot.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace NAIProg;
@@ -15,7 +16,6 @@ public partial class Prompt {
 
 	public string GetPrompt(Dictionary character) {
 		string[] moods = (string[])Game.Config["Mood"];
-		string[] sceneries = (string[])Game.Config["Scenery"];
 
 		Dictionary pose = GetPose();
 		Dictionary outfit = GetOutfit(pose);
@@ -26,7 +26,7 @@ public partial class Prompt {
 			(string)Game.Config["Style"],
 			((string[])character["Prompt"]).Join(", "),
 			moods[ImageGen.Random.RandiRange(0, moods.Length - 1)],
-			sceneries[ImageGen.Random.RandiRange(0, sceneries.Length - 1)],
+			GetScenery(),
 			(string)pose["Prompt"],
 			(string)outfit["Prompt"],
 			outfitMod != null ? (string)outfitMod["Prompt"] : ""
@@ -57,12 +57,33 @@ public partial class Prompt {
 		return (Dictionary)characters[ImageGen.Random.RandiRange(0, characters.Count - 1)];
 	}
 
+	public string GetScenery() {
+		Array sceneries = (Array)Game.Config["Scenery"];
+		Dictionary scenery = (Dictionary)sceneries[ImageGen.Random.RandiRange(0, sceneries.Count - 1)];
+		string[] variants = (string[])scenery["Variants"];
+		int index = ImageGen.Random.RandiRange(0, variants.Length - 1);
+		return (string)scenery["Prompt"] + (!string.IsNullOrWhiteSpace(variants[index]) ? ", " : "") + variants[index];
+	}
+
 	public Dictionary GetPose() {
 		float lewd = GetLewdWithOffset(-0.2f, 0.3f);
 		Array poses = (Array)Game.Config["Pose"];
-		Variant[] options = poses.Where(p => (float)((Dictionary)p)["Lewd"] <= lewd).ToArray();
-
-		return (Dictionary)options[GetPowWeightedIndex(options.Length - 1, Mathf.Max(0, (int)((ImageGen.Lewd - 1.0) * 10.0)))];
+        List<Dictionary> poseVariants = new();
+		foreach (Dictionary pose in poses.Select(p => (Dictionary)p)) {
+			Array variants = (Array)pose["Variants"];
+			foreach (Dictionary variant in variants.Select(v => (Dictionary)v)) {
+				if ((float)pose["Lewd"] + (float)variant["Lewd"] <= lewd) {
+					poseVariants.Add(new Dictionary() {
+						{ "Lewd", (float)pose["Lewd"] + (float)variant["Lewd"] },
+						{ "Ban", (string)pose["Ban"] },
+						{ "Req", (string)pose["Req"] },
+						{ "Prompt", (string)pose["Prompt"] + (!string.IsNullOrWhiteSpace((string)variant["Prompt"]) ? ", " : "") + (string)variant["Prompt"] }
+					});
+				}
+			}
+		}
+		poseVariants = poseVariants.OrderBy(pV => (float)pV["Lewd"]).ToList();
+		return poseVariants[GetPowWeightedIndex(poseVariants.Count - 1, Mathf.Max(0, (ImageGen.Lewd - 1.0) * 10.0))];
 	}
 
 	public Dictionary GetOutfit(Dictionary pose) {
@@ -77,7 +98,7 @@ public partial class Prompt {
 			(string.IsNullOrWhiteSpace(poseBan) || (string)((Dictionary)p)["Type"] != poseBan)
 		).ToArray();
 
-		return (Dictionary)options[GetPowWeightedIndex(options.Length - 1, Mathf.Max(0, (ImageGen.Lewd - 1.0) / 2.0))];
+		return (Dictionary)options[GetPowWeightedIndex(options.Length - 1, Mathf.Max(0, (ImageGen.Lewd - 1.0) * 10.0))];
 	}
 
 	public Dictionary GetOutfitMod(string poseBan, string outfitType) {
