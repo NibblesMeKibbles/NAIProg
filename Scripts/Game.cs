@@ -38,26 +38,54 @@ public partial class Game : Node2D {
 		ImageGen.Process(delta);
 	}
 
+	public static string GetUserConfigProperty(string pattern) {
+		if (!FileAccess.FileExists(userConfigPath)) {
+			return null;
+		}
+		FileAccess file = FileAccess.Open(userConfigPath, FileAccess.ModeFlags.Read);
+		string content = file.GetAsText();
+		file.Close();
+		file.Dispose();
+
+		RegEx reg = RegEx.CreateFromString(pattern);
+		RegExMatch match = reg.Search(content);
+		if (match != null) {
+			return match.Strings[0];
+		}
+		return null;
+	}
+
 	public void LoadConfigJson(bool forceReset = false) {
 		bool resetedApiKey = false;
 		if (Engine.IsEditorHint() || OS.HasFeature("editor") || !FileAccess.FileExists(userConfigPath) && FileAccess.FileExists(resConfigPath) || forceReset) {
+			// Save the user config ApiKey and AutoHideMenu values
+			string oldApiKey = GetUserConfigProperty("pst-[^\"]+");
+			string oldAutoHideMenu = GetUserConfigProperty("\"AutoHideMenu\": (false|true),");
+			GD.Print(oldApiKey, oldAutoHideMenu);
+
 			// Copy config.json and README.md
 			CopyResFileToUser(resConfigPath, userConfigPath);
 			CopyResFileToUser(resReadmePath, userReadmePath);
 
 			// Reset config.json to defaults
-			if (!Engine.IsEditorHint() && !OS.HasFeature("editor")) {
-				FileAccess fileUser = FileAccess.Open(userConfigPath, FileAccess.ModeFlags.Write);
-				FileAccess fileRes = FileAccess.Open(resConfigPath, FileAccess.ModeFlags.Read);
-				string content = fileRes.GetAsText();
+			FileAccess fileUser = FileAccess.Open(userConfigPath, FileAccess.ModeFlags.Write);
+			FileAccess fileRes = FileAccess.Open(resConfigPath, FileAccess.ModeFlags.Read);
+			string content = fileRes.GetAsText();
+
+			// but preserve the old ApiKey and AutoHideMenu values
+			if (oldApiKey != null) {
 				RegEx reg = RegEx.CreateFromString("pst-[^\"]+");
-				content = reg.Sub(content, "pst-********");
-				content = content.Replace("\"AutoHideMenu\": true,", "\"AutoHideMenu\": false,");
-				fileUser.StoreString(content);
-				fileUser.Close();
-				fileRes.Close();
-				resetedApiKey = true;
+				content = reg.Sub(content, oldApiKey);
 			}
+			if (oldAutoHideMenu != null) {
+				RegEx reg = RegEx.CreateFromString("\"AutoHideMenu\": (false|true),");
+				content = reg.Sub(content, oldAutoHideMenu);
+			}
+
+			fileUser.StoreString(content);
+			fileUser.Close();
+			fileRes.Close();
+			resetedApiKey = oldApiKey == null || oldApiKey.Contains("******");
 		}
 		// Parse JSON
 		if (FileAccess.FileExists(userConfigPath)) {
