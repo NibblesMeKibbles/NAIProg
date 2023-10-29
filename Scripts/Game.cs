@@ -61,7 +61,6 @@ public partial class Game : Node2D {
 			// Save the user config ApiKey and AutoHideMenu values
 			string oldApiKey = GetUserConfigProperty("pst-[^\"]+");
 			string oldAutoHideMenu = GetUserConfigProperty("\"AutoHideMenu\": (false|true),");
-			GD.Print(oldApiKey, oldAutoHideMenu);
 
 			// Copy config.json and README.md
 			CopyResFileToUser(resConfigPath, userConfigPath);
