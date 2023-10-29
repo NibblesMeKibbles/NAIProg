@@ -68,7 +68,6 @@ public partial class ImageGen {
 		httpRequestTest.Request(Game.ApiTest, headers);
 	}
 	private void OnTestRequestCompleted(long result, long responseCode, string[] headers, byte[] body) {
-		GD.Print("complete");
 		if (result != (long)HttpRequest.Result.Success || responseCode != 200) {
 			string responseBody = Encoding.UTF8.GetString(body);
 			Game.CreateAlert("Test API Call" +
