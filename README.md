@@ -2,24 +2,29 @@
 # NAI Prog
 Short for **N**ovel**AI** Diffusion **Prog**ressively More Lewd Automated Image Generator, the name speaks for itself. If you're familiar with coding and prompting, viewing the [`config.json`](config.json) self-explains most of the [Functionality](#functionality).
 
+NAI Prog is a Godot desktop game/app that leverages dynamically compiling a **Prompt** and **Undesired Content** from a collection of categorized tags to generate random AI images at a fixed interval.
+
+The `config.json` is copied from the application content to the user directory when the application is ran for the first time, and can be browsed to using the in-game "Open user directory" button (<img src="Icons/icons8-open-folder-in-new-tab-50.png" width="20">). The `config.json` can be modified for personal tastes and reloaded in-game during runtime to instantly reflect any changes made.
+
 ## In-Game Buttons
+|Name|Icon|Functionality|
+|-|-|-|
+|Start||If the test API call to NovelAI API succeeds, click to start the image generation timer and Lewd progression|
 |||
-|-|-|
-|Start|If the test API call to NovelAI API succeeds, click to start the image generation timer and Lewd progression|
-|||
-|Last Image|View the previously loaded image|
-|Pause|Pause or unpause the image generation timer and Lewd progression|
-|Next Image|View the next image or generate a new image if already viewing the latest|
-|Lewd Slider|View and update the current [Lewd value](#lewd-value)|
-|||
-|Save Current Image (with metadata)|Save the currently viewed image to a timestamped `.png` file with full NovelAI metadata|
-|Reload config.json|Re-import the user folder `config.json` and its configurations|
-|Reset config.json to default|Restore the user `config.json` to the default resource `config.json` contents|
-|Open user directory|Open a shell window to the user directory that contains the local `config.json`, `README.md`, and any `/SavedImages/`|
-|Open Prompt & Undesired Content Window|Open a non-editable window that displays the currently viewed image's Prompt and Undesired Content|
-|Toggle Menu AutoHide|When AutoHide is enabled, the bottom menu will only be visible when the mouse is hovering over it|
-|Toggle FullScreen Mode|Switch between Windows and FullScreen display mode|
-|Exit to Desktop|Quit the game|
+|Last Image|<img src="Icons/icons8-back-50.png" width="20">|View the previously loaded image|
+|Pause|<img src="Icons/icons8-pause-50.png" width="20">|Pause or unpause the image generation timer and Lewd progression|
+|Next Image|<img src="Icons/icons8-next-50.png" width="20">|View the next image or generate a new image if already viewing the latest|
+|Lewd Slider||View and update the current [Lewd value](#lewd-value)|
+||||
+|Save Current Image (with metadata)|<img src="Icons/icons8-save-50.png" width="20">|Save the currently viewed image to a timestamped `.png` file with full NovelAI metadata|
+|Reload config.json|<img src="Icons/icons8-reload-50.png" width="20">|Re-import the user folder `config.json` and its configurations|
+|Reset config.json to default|<img src="Icons/icons8-reset-50.png" width="20">|Restore the user `config.json` to the default resource `config.json` contents|
+|Open user directory|<img src="Icons/icons8-open-folder-in-new-tab-50.png" width="20">|Open a shell window to the user directory that contains the local `config.json`, `README.md`, and any `/SavedImages/`|
+|Open Prompt & Undesired Content Window|<img src="Icons/icons8-edit-property-50.png" width="20">|Open a non-editable window that displays the currently viewed image's Prompt and Undesired Content|
+||||
+|Toggle Menu AutoHide|<img src="Icons/icons8-hide-50.png" width="20">|When AutoHide is enabled, the bottom menu will only be visible when the mouse is hovering over it|
+|Toggle FullScreen Mode|<img src="Icons/icons8-fit-to-width-50.png" width="20">|Switch between Windows and FullScreen display mode|
+|Exit to Desktop|<img src="Icons/icons8-quit-50.png" width="20">|Quit the game|
 
 # Functionality
 Going forward, the code tag (`example text`) is heavily used when referencing attributes present in the [`config.json`](config.json) file.
