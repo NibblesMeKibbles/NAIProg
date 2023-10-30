@@ -47,9 +47,9 @@ public partial class Prompt {
 	}
 
 	// Higher index has highter probability
-	public int GetPowWeightedIndex(int maxIndex, double lastIndexBonus = 0) {
-		float rand = GetRandomRange(0f, (float)Mathf.Pow(maxIndex, 1.3f + lastIndexBonus));
-		return Mathf.RoundToInt(Mathf.Pow(rand, 1f/(1.3f + lastIndexBonus)));
+	public int GetPowWeightedIndex(double pow, int maxIndex) {
+		float rand = GetRandomRange(0f, (float)Mathf.Pow(maxIndex, pow));
+		return Mathf.RoundToInt(Mathf.Pow(rand, 1f/(pow)));
 	}
 
 	public Dictionary GetCharacter() {
@@ -77,13 +77,13 @@ public partial class Prompt {
 						{ "Lewd", (float)pose["Lewd"] + (float)variant["Lewd"] },
 						{ "Ban", (string)pose["Ban"] },
 						{ "Req", (string)pose["Req"] },
-						{ "Prompt", (string)pose["Prompt"] + (!string.IsNullOrWhiteSpace((string)variant["Prompt"]) ? ", " : "") + (string)variant["Prompt"] }
+						{ "Prompt", "{" + (string)pose["Prompt"] + (!string.IsNullOrWhiteSpace((string)variant["Prompt"]) ? ", " : "") + (string)variant["Prompt"] + "}" }
 					});
 				}
 			}
 		}
 		poseVariants = poseVariants.OrderBy(pV => (float)pV["Lewd"]).ToList();
-		return poseVariants[GetPowWeightedIndex(poseVariants.Count - 1, Mathf.Max(0, (ImageGen.Lewd - 1.0) * 10.0))];
+		return poseVariants[GetPowWeightedIndex(2.0 + ImageGen.Lewd, poseVariants.Count - 1)];
 	}
 
 	public Dictionary GetOutfit(Dictionary pose) {
@@ -98,7 +98,7 @@ public partial class Prompt {
 			(string.IsNullOrWhiteSpace(poseBan) || (string)((Dictionary)p)["Type"] != poseBan)
 		).ToArray();
 
-		return (Dictionary)options[GetPowWeightedIndex(options.Length - 1, Mathf.Max(0, (ImageGen.Lewd - 1.0) * 10.0))];
+		return (Dictionary)options[GetPowWeightedIndex(2.0 + ImageGen.Lewd, options.Length - 1)];
 	}
 
 	public Dictionary GetOutfitMod(string poseBan, string outfitType) {
