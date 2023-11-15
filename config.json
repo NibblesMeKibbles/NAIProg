@@ -20,9 +20,6 @@
 			]
 		}
 	],
-	"UndesiredContentPreset": [
-		"lowres, bad, text, error, missing, extra, fewer, cropped, jpeg artifacts, worst quality, bad quality, watermark, displeasing, unfinished, chromatic aberration, scan, scan artifacts"
-	],
 	"UndesiredContent": [
 		"[[[floral, lace]]], bokeh, bloom, lens flare, [portrait, close-up]",
 		"blurry, trash, waste, ugly, hideous, disgusting, disturbing, horrible, deformed, bloody, horror, terrifying, horrendous, malicious, destruction, obliteration, damage, symmetry, disorder, nasty",
@@ -637,6 +634,12 @@
 			{ "Lewd": 0.0, "Prompt": "detailed pussy, pubic hair, detailed nipples, abs, groin tendon" }
 		]
 	},
+	"QualityToggle": "very aesthetic, best quality, absurdres, ",
+	"UCPresets": [
+		"lowres, bad, text, error, missing, extra, fewer, cropped, jpeg artifacts, worst quality, bad quality, watermark, displeasing, unfinished, chromatic aberration, scan, scan artifacts, ",
+		"lowres, jpeg artifacts, worst quality, watermark, blurry, very displeasing, ",
+		""
+	],
 	"ApiPayloadBody": {
 		"input": "%INPUT_PROMPT%",
 		"model": "nai-diffusion-2",

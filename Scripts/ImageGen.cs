@@ -95,8 +95,12 @@ public partial class ImageGen {
 
 		Dictionary character = Prompt.GetCharacter();
 		pendingPrompt = Prompt.GetPrompt(character);
+		if ((bool)((Dictionary)((Dictionary)Game.Config["ApiPayloadBody"])["parameters"])["qualityToggle"]) {
+			pendingPrompt = ((string)Game.Config["QualityToggle"]) + pendingPrompt;
+		}
 		// Undesired Content: Preset + Character + Other
-		pendingUndesired = ((string[])Game.Config["UndesiredContentPreset"]).Concat((string[])character["UndesiredContent"]).Concat((string[])Game.Config["UndesiredContent"]).ToArray().Join(", ");
+		pendingUndesired = ((string[])character["UndesiredContent"]).Concat((string[])Game.Config["UndesiredContent"]).ToArray().Join(", ");
+		pendingUndesired = ((string[])Game.Config["UCPresets"])[(int)((Dictionary)((Dictionary)Game.Config["ApiPayloadBody"])["parameters"])["ucPreset"]] + pendingUndesired;
 
 		((Dictionary)Game.Config["ApiPayloadBody"])["input"] = pendingPrompt;
 		((Dictionary)((Dictionary)Game.Config["ApiPayloadBody"])["parameters"])["negative_prompt"] = pendingUndesired;
