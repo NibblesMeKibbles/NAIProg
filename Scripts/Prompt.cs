@@ -49,7 +49,7 @@ public partial class Prompt {
 	// Higher index has highter probability
 	public int GetPowWeightedIndex(double pow, int maxIndex) {
 		float rand = GetRandomRange(0f, (float)Mathf.Pow(maxIndex, pow));
-		return Mathf.RoundToInt(Mathf.Pow(rand, 1f/(pow)));
+		return Mathf.RoundToInt(Mathf.Pow(rand, 1f/pow));
 	}
 
 	public Dictionary GetCharacter() {
