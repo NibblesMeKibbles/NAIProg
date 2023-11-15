@@ -5,26 +5,30 @@
 	"GoalMax": 20.0,
 	"Interval": 35.0,
 	"LewdOffsetRandomness": 1.0,
-	"Quality": "very aesthetic, best quality, absurdres",
-	"Style": "realistic, {{photorealistic}}, dynamic lighting, realistic scenery, intricate textures, intricate skin, [{body freckles}], skin pores arm leg freckles, [looking at viewer], full body, nsfw",
+	"Quality": "{{artist:Bastien Lecouffe-Deharme, artist:Bastien Lecouffe Deharme}}, [artist:Nixeu, [artist:Alex Horley-Orlandelli]]",
+	"Style": "[looking at viewer, full body, cowboy shot], nsfw",
 	"Character": [
 		{
 			"Prompt": [
-				"1girl, solo, mature female, milf, older woman, aged up, Misaka Mikoto",
-				"{{red hair}, red swept bangs}, intricate red eyes, [[[[[[pink lips]]]]]], medium petite breasts, biceps"
+				"1girl, medium-long straight hair, ponytail, brown hair, [sidelocks], {{dot nose}}, medium petite breasts"
 			],
 			"UndesiredContent": [
-				"pregnant, chibi, baby, child, loli, youth, young",
-				"pixie cut, nose, long nipples, abs, [[[excessive pubic hair]]]",
-				"wet skin, shiny skin, [sunburn, [[tattoo]]], facial freckles, huge penis, small penis"
+				"pregnant, chibi, child, loli, {{nose}}",
+				"[[[wavy curly hair, shiny wet skin, long nipples, excessive pubic hair]]]"
+			]
+		},
+		{
+			"Prompt": [
+				"1girl, medium-long straight hair, [red hair], [sidelocks], {{dot nose}}, medium petite breasts"
+			],
+			"UndesiredContent": [
+				"pregnant, chibi, child, loli, {{nose}}",
+				"[[[wavy curly hair, shiny wet skin, long nipples, excessive pubic hair]]]"
 			]
 		}
 	],
 	"UndesiredContent": [
-		"[[[floral, lace]]], bokeh, bloom, lens flare, [portrait, close-up]",
-		"blurry, trash, waste, ugly, hideous, disgusting, disturbing, horrible, deformed, bloody, horror, terrifying, horrendous, malicious, destruction, obliteration, damage, symmetry, disorder, nasty",
-		"unsightly, unpicturesque, unquality, unmasterpiece, unnice, unlovely, unpleasant, unpretty, unfresh, unenchanting, undelightful, unclear, unspectacular, undazzling, ungorgeous, unbrilliant, unsharp, unhot, unanatomy",
-		"insightly, inpicturesque, inquality, inmasterpiece"
+		"{{arist:Daniel Merriam, artist:Koyoharu Gotouge, artist:Shingo Araki}}"
 	],
 	"Mood": [
 		"[happy]",
@@ -274,7 +278,7 @@
 					  { "Lewd": 0.1, "Prompt": "from below" },
 					  { "Lewd": 0.0, "Prompt": "from side" }
 		] },
-	{ "Lewd": 0.0, "Req": "",    "Ban": "",    "Prompt": "yokozuwari",
+	{ "Lewd": 0.0, "Req": "",    "Ban": "",    "Prompt": "{yokozuwari}",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.0, "Prompt": "facing away, from behind, back, looking back" },
 					  { "Lewd": 0.0, "Prompt": "from above" },
@@ -402,42 +406,41 @@
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.1, "Prompt": "covering breasts" }
 		] },
-
-	{ "Lewd": 0.2, "Req": "Btm", "Ban": "",    "Prompt": "upskirt, bent over, leaning forward, all fours, from behind, {from below}",
+	{ "Lewd": 0.1, "Req": "Btm", "Ban": "",    "Prompt": "upskirt, bent over, leaning forward, all fours, from behind, {from below}",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.0, "Prompt": "legs apart" }
 		] },
-	{ "Lewd": 0.2, "Req": "",    "Ban": "",    "Prompt": "ass grab, {grabbing own ass}, hand on own ass",
+	{ "Lewd": 0.1, "Req": "",    "Ban": "",    "Prompt": "ass grab, {grabbing own ass}, hand on own ass",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.1, "Prompt": "from below" }
 		] },
 
-	{ "Lewd": 0.3, "Req": "Top", "Ban": "",    "Prompt": "clothes pull, pulled by self, clothes collar tug, holding, [[cleavage, tight clothes]]",
+	{ "Lewd": 0.2, "Req": "Top", "Ban": "",    "Prompt": "clothes pull, pulled by self, clothes collar tug, holding, [[cleavage, tight clothes]]",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.0, "Prompt": "from above" },
 					  { "Lewd": 0.1, "Prompt": "from below" }
 		] },
-	{ "Lewd": 0.3, "Req": "Btm", "Ban": "",    "Prompt": "clothes pull, pulled by self, pulling clothes down",
+	{ "Lewd": 0.2, "Req": "Btm", "Ban": "",    "Prompt": "clothes pull, pulled by self, pulling clothes down",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.0, "Prompt": "from above" },
 					  { "Lewd": 0.1, "Prompt": "from below" }
 		] },
-	{ "Lewd": 0.3, "Req": "Top", "Ban": "",    "Prompt": "clothes lift, lifted by self",
+	{ "Lewd": 0.2, "Req": "Top", "Ban": "",    "Prompt": "clothes lift, lifted by self",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.0, "Prompt": "from above" },
 					  { "Lewd": 0.1, "Prompt": "from below" }
 		] },
-	{ "Lewd": 0.3, "Req": "",    "Ban": "",    "Prompt": "grabbing own breast",
+	{ "Lewd": 0.2, "Req": "",    "Ban": "",    "Prompt": "grabbing own breast",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "breast lift" },
 					  { "Lewd": 0.0, "Prompt": "breasts squeezed together" }
 		] },
 
-	{ "Lewd": 0.5, "Req": "",    "Ban": "Btm", "Prompt": "panties aside, panty pull, pulling panties aside, pussy slip, [spread legs]",
+	{ "Lewd": 0.3, "Req": "",    "Ban": "Btm", "Prompt": "panties aside, panty pull, pulling panties aside, pussy slip, [spread legs]",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.0, "Prompt": "facing away, from behind, back, looking back" }
 		] },
 
-	{ "Lewd": 0.6, "Req": "",    "Ban": "Btm", "Prompt": "pussy, vaginal, fingers on pussy, female masturbation, fingering",
+	{ "Lewd": 0.4, "Req": "",    "Ban": "Btm", "Prompt": "pussy, vaginal, fingers on pussy, female masturbation, fingering",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "kneeling" },
 					  { "Lewd": 0.0, "Prompt": "kneeling, facing away, from behind, back, looking back" },
 					  { "Lewd": 0.0, "Prompt": "reclining" },
@@ -452,7 +455,7 @@
 					  { "Lewd": 0.3, "Prompt": "[female ejaculation, squirting], open mouth, blush, [[[ahegao, rolling eyes]]], lying on stomach, {{{fingering from behind}}}, facing away, from behind, back, looking back" },
 					  { "Lewd": 0.3, "Prompt": "[female ejaculation, squirting], open mouth, blush, [[[ahegao, rolling eyes]]], {reclining}, {{fingering from behind}}, facing away, from behind, back, looking back" }
 		] },
-	{ "Lewd": 0.6, "Req": "",    "Ban": "Btm", "Prompt": "single dildo riding, vaginal",
+	{ "Lewd": 0.4, "Req": "",    "Ban": "Btm", "Prompt": "single dildo riding, vaginal",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "spread legs" },
 					  { "Lewd": 0.0, "Prompt": "spread legs, from below, cowgirl position, squatting" },
 					  { "Lewd": 0.0, "Prompt": "ass, back, facing away, from behind, looking back, kneeling" },
@@ -463,7 +466,7 @@
 					  { "Lewd": 0.3, "Prompt": "[female ejaculation, squirting], open mouth, blush, [[[ahegao, rolling eyes]]], lying on side, on side, from above, close-up, [twisted torso], leg up, looking back, [[cowboy shot]], pov, single dildo" }
 		] },
 
-	{ "Lewd": 0.7, "Req": "",    "Ban": "",    "Prompt": "handjob, pov, pov crotch, 1guy, penis",
+	{ "Lewd": 0.5, "Req": "",    "Ban": "",    "Prompt": "handjob, pov, pov crotch, 1guy, penis",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "hand on penis" },
 					  { "Lewd": 0.0, "Prompt": "hand on penis, from above" },
 					  { "Lewd": 0.0, "Prompt": "hands on penis" },
@@ -472,95 +475,95 @@
 					  { "Lewd": 0.1, "Prompt": "[[precum]], hand on penis, from above" },
 					  { "Lewd": 0.1, "Prompt": "[[precum]], hands on penis" },
 					  { "Lewd": 0.1, "Prompt": "[[precum]], hands on penis, from above" },
-					  { "Lewd": 0.15, "Prompt": "precum, hand on penis" },
-					  { "Lewd": 0.15, "Prompt": "precum, hand on penis, from above" },
-					  { "Lewd": 0.15, "Prompt": "precum, hands on penis" },
-					  { "Lewd": 0.15, "Prompt": "precum, hands on penis, from above" },
-					  { "Lewd": 0.2, "Prompt": "open mouth, blush, precum, hand on penis" },
-					  { "Lewd": 0.2, "Prompt": "open mouth, blush, precum, hand on penis, from above" },
-					  { "Lewd": 0.2, "Prompt": "open mouth, blush, precum, hands on penis" },
-					  { "Lewd": 0.2, "Prompt": "open mouth, blush, precum, hands on penis, from above" },
-					  { "Lewd": 0.3, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, hand on penis" },
-					  { "Lewd": 0.3, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, hand on penis, from above" },
-					  { "Lewd": 0.3, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, hands on penis" },
-					  { "Lewd": 0.3, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, hands on penis, from above" }
+					  { "Lewd": 0.2, "Prompt": "precum, hand on penis" },
+					  { "Lewd": 0.2, "Prompt": "precum, hand on penis, from above" },
+					  { "Lewd": 0.2, "Prompt": "precum, hands on penis" },
+					  { "Lewd": 0.2, "Prompt": "precum, hands on penis, from above" },
+					  { "Lewd": 0.3, "Prompt": "open mouth, blush, precum, hand on penis" },
+					  { "Lewd": 0.3, "Prompt": "open mouth, blush, precum, hand on penis, from above" },
+					  { "Lewd": 0.3, "Prompt": "open mouth, blush, precum, hands on penis" },
+					  { "Lewd": 0.3, "Prompt": "open mouth, blush, precum, hands on penis, from above" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, hand on penis" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, hand on penis, from above" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, hands on penis" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, hands on penis, from above" }
 		] },
-	{ "Lewd": 0.7, "Req": "",    "Ban": "Top", "Prompt": "paizuri, penis between breasts, from above, pov, pov crotch, 1guy, penis",
+	{ "Lewd": 0.5, "Req": "",    "Ban": "Top", "Prompt": "paizuri, penis between breasts, from above, pov, pov crotch, 1guy, penis",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.0, "Prompt": "saliva" },
 					  { "Lewd": 0.0, "Prompt": "saliva, tongue out, licking penis" },
-					  { "Lewd": 0.1, "Prompt": "[[precum]]" },
-					  { "Lewd": 0.1, "Prompt": "[[precum]], saliva" },
-					  { "Lewd": 0.1, "Prompt": "[[precum]], saliva, tongue out, licking penis" },
-					  { "Lewd": 0.3, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush" },
-					  { "Lewd": 0.3, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, [[precum]], saliva" },
-					  { "Lewd": 0.3, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, [[precum]], saliva, tongue out, licking penis" }
+					  { "Lewd": 0.2, "Prompt": "[[precum]]" },
+					  { "Lewd": 0.2, "Prompt": "[[precum]], saliva" },
+					  { "Lewd": 0.2, "Prompt": "[[precum]], saliva, tongue out, licking penis" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, [[precum]], saliva" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth, open mouth]]]], blush, [[precum]], saliva, tongue out, licking penis" }
 		] },
 
-	{ "Lewd": 0.8, "Req": "",    "Ban": "",    "Prompt": "oral, fellatio, pov, pov crotch, 1guy, penis",
+	{ "Lewd": 0.6, "Req": "",    "Ban": "",    "Prompt": "oral, fellatio, pov, pov crotch, 1guy, penis",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "[saliva]" },
 					  { "Lewd": 0.0, "Prompt": "{saliva}" },
 					  { "Lewd": 0.0, "Prompt": "[saliva], from above" },
 					  { "Lewd": 0.0, "Prompt": "{saliva}, from above" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, cum in mouth]]]], blush, [saliva]" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, cum in mouth]]]], blush, {saliva}" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, cum in mouth]]]], blush, [saliva], from above" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, cum in mouth]]]], blush, {saliva}, from above" }
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in mouth]]]], blush, [saliva]" },
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in mouth]]]], blush, {saliva}" },
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in mouth]]]], blush, [saliva], from above" },
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in mouth]]]], blush, {saliva}, from above" }
 		] },
-	{ "Lewd": 0.8, "Req": "",    "Ban": "",    "Prompt": "licking penis, tongue on penis, tongue out, [[fellatio]], pov, pov crotch, 1guy, penis",
+	{ "Lewd": 0.6, "Req": "",    "Ban": "",    "Prompt": "licking penis, tongue on penis, tongue out, [[fellatio]], pov, pov crotch, 1guy, penis",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "[saliva]" },
 					  { "Lewd": 0.0, "Prompt": "{saliva}" },
 					  { "Lewd": 0.0, "Prompt": "[saliva], from above" },
 					  { "Lewd": 0.0, "Prompt": "{saliva}, from above" },
-					  { "Lewd": 0.1, "Prompt": "precum, [saliva]" },
-					  { "Lewd": 0.1, "Prompt": "precum, {saliva}" },
-					  { "Lewd": 0.1, "Prompt": "precum, [saliva], from above" },
-					  { "Lewd": 0.1, "Prompt": "precum, {saliva}, from above" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], blush, [saliva]" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], blush, {saliva}" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], blush, [saliva], from above" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], blush, {saliva}, from above" }
+					  { "Lewd": 0.2, "Prompt": "precum, [saliva]" },
+					  { "Lewd": 0.2, "Prompt": "precum, {saliva}" },
+					  { "Lewd": 0.2, "Prompt": "precum, [saliva], from above" },
+					  { "Lewd": 0.2, "Prompt": "precum, {saliva}, from above" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], blush, [saliva]" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], blush, {saliva}" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], blush, [saliva], from above" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], blush, {saliva}, from above" }
 		] },
-	{ "Lewd": 0.8, "Req": "",    "Ban": "",    "Prompt": "kissing penis, kissing, lips on penis, [[fellatio, saliva]], pov, pov crotch, 1guy, penis",
+	{ "Lewd": 0.6, "Req": "",    "Ban": "",    "Prompt": "kissing penis, kissing, lips on penis, [[fellatio, saliva]], pov, pov crotch, 1guy, penis",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "[saliva]" },
 					  { "Lewd": 0.0, "Prompt": "{saliva}" },
 					  { "Lewd": 0.0, "Prompt": "[saliva], from above" },
 					  { "Lewd": 0.0, "Prompt": "{saliva}, from above" },
-					  { "Lewd": 0.1, "Prompt": "precum, [saliva]" },
-					  { "Lewd": 0.1, "Prompt": "precum, {saliva}" },
-					  { "Lewd": 0.1, "Prompt": "precum, [saliva], from above" },
-					  { "Lewd": 0.1, "Prompt": "precum, {saliva}, from above" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], [saliva]" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], {saliva}" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], [saliva], from above" },
-					  { "Lewd": 0.2, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], {saliva}, from above" }
+					  { "Lewd": 0.2, "Prompt": "precum, [saliva]" },
+					  { "Lewd": 0.2, "Prompt": "precum, {saliva}" },
+					  { "Lewd": 0.2, "Prompt": "precum, [saliva], from above" },
+					  { "Lewd": 0.2, "Prompt": "precum, {saliva}, from above" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], [saliva]" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], {saliva}" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], [saliva], from above" },
+					  { "Lewd": 0.4, "Prompt": "[[[[cum, projectile cum, cum in mouth]]]], {saliva}, from above" }
 		] },
 
-	{ "Lewd": 0.9, "Req": "",    "Ban": "Btm", "Prompt": "sex, vaginal, cowgirl position, from below, pov, pov crotch, 1guy, penis",
+	{ "Lewd": 0.7, "Req": "",    "Ban": "Btm", "Prompt": "sex, vaginal, cowgirl position, from below, pov, pov crotch, 1guy, penis",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "" },
 					  { "Lewd": 0.0, "Prompt": "leaning back, spread legs" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, leaning back, spread legs" }
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush" },
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, leaning back, spread legs" }
 		] },
-	{ "Lewd": 0.9, "Req": "",    "Ban": "Btm", "Prompt": "sex from behind, vaginal, ass, from above, facing away, looking back, {pov, pov crotch, 1guy, penis}",
+	{ "Lewd": 0.7, "Req": "",    "Ban": "Btm", "Prompt": "sex from behind, vaginal, ass, from above, facing away, looking back, {pov, pov crotch, 1guy, penis}",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "{doggystyle, all fours}" },
 					  { "Lewd": 0.0, "Prompt": "{{prone_bone, from above, close-up, cowboy shot, straight-on}, lying on stomach, legs together}" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, {doggystyle, all fours}" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, {{prone_bone, from above, close-up, cowboy shot, straight-on}, lying on stomach, legs together}" }
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, {doggystyle, all fours}" },
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, {{prone_bone, from above, close-up, cowboy shot, straight-on}, lying on stomach, legs together}" }
 		] },
-	{ "Lewd": 0.9, "Req": "",    "Ban": "Btm", "Prompt": "sex, vaginal, girl on top, pov, pov crotch, 1guy, penis",
+	{ "Lewd": 0.7, "Req": "",    "Ban": "Btm", "Prompt": "sex, vaginal, girl on top, pov, pov crotch, 1guy, penis",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "{{amazon position}}" },
 					  { "Lewd": 0.0, "Prompt": "reverse cowgirl position, facing away, looking back, from below" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, {{amazon position}}" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, reverse cowgirl position, facing away, looking back, from below" }
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, {{amazon position}}" },
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, reverse cowgirl position, facing away, looking back, from below" }
 		] },
-	{ "Lewd": 0.9, "Req": "",    "Ban": "Btm", "Prompt": "sex, vaginal, boy on top, missionary, pov, pov crotch, 1guy, penis",
+	{ "Lewd": 0.7, "Req": "",    "Ban": "Btm", "Prompt": "sex, vaginal, boy on top, missionary, pov, pov crotch, 1guy, penis",
 		"Variants": [ { "Lewd": 0.0, "Prompt": "lying on back, {folded, legs up, knees up}, from above" },
 					  { "Lewd": 0.0, "Prompt": "lying on back, from above, cowboy shot, close-up" },
 					  { "Lewd": 0.0, "Prompt": "{lying on side, on side}, from above, close-up, twisted torso, looking back, [[cowboy shot]]" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, lying on back, {folded, legs up, knees up}, from above" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, lying on back, from above, cowboy shot, close-up" },
-					  { "Lewd": 0.1, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, {lying on side, on side}, from above, close-up, twisted torso, looking back, [[cowboy shot]]" }
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, lying on back, {folded, legs up, knees up}, from above" },
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, lying on back, from above, cowboy shot, close-up" },
+					  { "Lewd": 0.3, "Prompt": "[[[[cum, cum in pussy, creampie, open mouth]]]], blush, {lying on side, on side}, from above, close-up, twisted torso, looking back, [[cowboy shot]]" }
 		] }
 	],
 	"Outfit": [
@@ -570,53 +573,56 @@
 		{ "Lewd": 0.1, "Type": "Btm", "Prompt": "denim shorts" },
 		{ "Lewd": 0.1, "Type": "Top", "Prompt": "crop top" },
 		{ "Lewd": 0.1, "Type": "Top", "Prompt": "compression shirt" },
-		{ "Lewd": 0.2, "Type": "Top", "Prompt": "tank top" },
-		{ "Lewd": 0.2, "Type": "Top", "Prompt": "evening gown" },
-		{ "Lewd": 0.2, "Type": "Btm", "Prompt": "gym shorts" },
-		{ "Lewd": 0.2, "Type": "Top", "Prompt": "dress" },
-		{ "Lewd": 0.2, "Type": "Btm", "Prompt": "skirt" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "crop top overhang" },
-		{ "Lewd": 0.3, "Type": "Btm", "Prompt": "cutoffs" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "sundress" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "tube dress" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "camisole" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "chemise" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "blouse" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "nightgown" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "{{{oversized t-shirt}}}" },
-		{ "Lewd": 0.3, "Type": "Top", "Prompt": "off-shoulder shirt" },
-		{ "Lewd": 0.3, "Type": "Btm", "Prompt": "yoga pants" },
-		{ "Lewd": 0.3, "Type": "Btm", "Prompt": "tankini" },
-		{ "Lewd": 0.4, "Type": "Btm", "Prompt": "mini skirt" },
-		{ "Lewd": 0.4, "Type": "Btm", "Prompt": "leggings" },
-		{ "Lewd": 0.4, "Type": "Top", "Prompt": "babydoll" },
-		{ "Lewd": 0.4, "Type": "Top", "Prompt": "negligee" },
-		{ "Lewd": 0.4, "Type": "Top", "Prompt": "{sideboob, tiny underboob, cleavage}, dress" },
-		{ "Lewd": 0.4, "Type": "Top", "Prompt": "revealing clothes, cleavage" },
-		{ "Lewd": 0.4, "Type": "Top", "Prompt": "{{{shirt overhang, downblouse}}}, cleavage, loose clothes, extended downblouse" },
-		{ "Lewd": 0.5, "Type": "Top", "Prompt": "corset" },
-		{ "Lewd": 0.5, "Type": "Top", "Prompt": "bustier" },
-		{ "Lewd": 0.5, "Type": "Btm", "Prompt": "micro shorts" },
-		{ "Lewd": 0.5, "Type": "Btm", "Prompt": "swimsuit" },
-		{ "Lewd": 0.5, "Type": "Top", "Prompt": "open robe, topless, cleavage" },
-		{ "Lewd": 0.5, "Type": "Top", "Prompt": "open dress, unbuttoned, stomach, opened by self, cleavage, navel, midriff, loose dress, topless, no bra" },
-		{ "Lewd": 0.5, "Type": "Top", "Prompt": "negligee, see-through, strap slip" },
-		{ "Lewd": 0.6, "Type": "Btm", "Prompt": "lingerie" },
-		{ "Lewd": 0.6, "Type": "Top", "Prompt": "bandeau" },
-		{ "Lewd": 0.6, "Type": "Top", "Prompt": "bikini" },
-		{ "Lewd": 0.6, "Type": "Btm", "Prompt": "microskirt" },
-		{ "Lewd": 0.6, "Type": "Btm", "Prompt": "lowleg bikini" },
-		{ "Lewd": 0.6, "Type": "Top", "Prompt": "open shirt, open clothes, opened by self, cleavage, breasts out" },
-		{ "Lewd": 0.6, "Type": "Top", "Prompt": "breasts out, loose shirt, nipples, unbuttoned, [[topless]]" },
-		{ "Lewd": 0.7, "Type": "Top", "Prompt": "bra" },
-		{ "Lewd": 0.7, "Type": "Btm", "Prompt": "panties" },
-		{ "Lewd": 0.8, "Type": "Btm", "Prompt": "panty pull" },
-		{ "Lewd": 0.8, "Type": "Btm", "Prompt": "bra strap slip" },
+		{ "Lewd": 0.1, "Type": "Top", "Prompt": "tank top" },
+		{ "Lewd": 0.1, "Type": "Top", "Prompt": "evening gown" },
+		{ "Lewd": 0.1, "Type": "Btm", "Prompt": "gym shorts" },
+		{ "Lewd": 0.1, "Type": "Top", "Prompt": "dress" },
+		{ "Lewd": 0.1, "Type": "Btm", "Prompt": "skirt" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "crop top overhang" },
+		{ "Lewd": 0.2, "Type": "Btm", "Prompt": "cutoffs" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "sundress" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "tube dress" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "camisole" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "chemise" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "blouse" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "nightgown" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "{{{oversized t-shirt}}}" },
+		{ "Lewd": 0.2, "Type": "Top", "Prompt": "off-shoulder shirt" },
+		{ "Lewd": 0.2, "Type": "Btm", "Prompt": "yoga pants" },
+		{ "Lewd": 0.2, "Type": "Btm", "Prompt": "tankini" },
+		{ "Lewd": 0.3, "Type": "Btm", "Prompt": "mini skirt" },
+		{ "Lewd": 0.3, "Type": "Btm", "Prompt": "leggings" },
+		{ "Lewd": 0.3, "Type": "Top", "Prompt": "babydoll" },
+		{ "Lewd": 0.3, "Type": "Top", "Prompt": "negligee" },
+		{ "Lewd": 0.3, "Type": "Top", "Prompt": "{sideboob, tiny underboob, cleavage}, dress" },
+		{ "Lewd": 0.3, "Type": "Top", "Prompt": "revealing clothes, cleavage" },
+		{ "Lewd": 0.3, "Type": "Top", "Prompt": "{{{shirt overhang, downblouse}}}, cleavage, loose clothes, extended downblouse" },
+		{ "Lewd": 0.3, "Type": "Top", "Prompt": "corset" },
+		{ "Lewd": 0.3, "Type": "Top", "Prompt": "bustier" },
+		{ "Lewd": 0.3, "Type": "Btm", "Prompt": "micro shorts" },
+		{ "Lewd": 0.3, "Type": "Btm", "Prompt": "swimsuit" },
+		{ "Lewd": 0.4, "Type": "Top", "Prompt": "robe, robe slip, open robe, topless, cleavage" },
+		{ "Lewd": 0.4, "Type": "Top", "Prompt": "open dress, unbuttoned, stomach, opened by self, cleavage, navel, midriff, loose dress, topless, no bra" },
+		{ "Lewd": 0.4, "Type": "Top", "Prompt": "negligee, see-through, strap slip" },
+		{ "Lewd": 0.4, "Type": "Btm", "Prompt": "lingerie" },
+		{ "Lewd": 0.4, "Type": "Top", "Prompt": "bandeau" },
+		{ "Lewd": 0.4, "Type": "Top", "Prompt": "bikini" },
+		{ "Lewd": 0.4, "Type": "Btm", "Prompt": "microskirt" },
+		{ "Lewd": 0.4, "Type": "Btm", "Prompt": "lowleg bikini" },
+		{ "Lewd": 0.5, "Type": "Top", "Prompt": "open shirt, open clothes, opened by self, cleavage, breasts out" },
+		{ "Lewd": 0.5, "Type": "Top", "Prompt": "breasts out, loose shirt, nipples, unbuttoned, [[topless]]" },
+		{ "Lewd": 0.5, "Type": "Top", "Prompt": "bra" },
+		{ "Lewd": 0.5, "Type": "Btm", "Prompt": "panties" },
+		{ "Lewd": 0.6, "Type": "Btm", "Prompt": "panty pull" },
+		{ "Lewd": 0.6, "Type": "Btm", "Prompt": "bra strap slip" },
+		{ "Lewd": 0.7, "Type": "Non", "Prompt": "{nude, pants pull, lowered pants}" },
 		{ "Lewd": 0.9, "Type": "Non", "Prompt": "nude" },
-		{ "Lewd": 1.0, "Type": "Non", "Prompt": "nude" },
-		{ "Lewd": 1.1, "Type": "Non", "Prompt": "nude" },
-		{ "Lewd": 1.3, "Type": "Non", "Prompt": "nude" },
-		{ "Lewd": 1.5, "Type": "Non", "Prompt": "nude" }
+		{ "Lewd": 1.0, "Type": "Non", "Prompt": "nude " },
+		{ "Lewd": 1.1, "Type": "Non", "Prompt": "nude  " },
+		{ "Lewd": 1.2, "Type": "Non", "Prompt": "nude   " },
+		{ "Lewd": 1.3, "Type": "Non", "Prompt": "nude    " },
+		{ "Lewd": 1.4, "Type": "Non", "Prompt": "nude     " },
+		{ "Lewd": 1.5, "Type": "Non", "Prompt": "nude      " }
 	],
 	"OutfitMod": {
 		"Top": [
@@ -627,11 +633,11 @@
 		],
 		"Btm": [
 			{ "Lewd": 0.0, "Prompt": "" },
-			{ "Lewd": 0.5, "Prompt": "no bra, abs, groin tendon" },
-			{ "Lewd": 0.8, "Prompt": "topless, detailed nipples, abs, groin tendon" }
+			{ "Lewd": 0.5, "Prompt": "no bra" },
+			{ "Lewd": 0.8, "Prompt": "topless, detailed nipples" }
 		],
 		"Non": [
-			{ "Lewd": 0.0, "Prompt": "detailed pussy, pubic hair, detailed nipples, abs, groin tendon" }
+			{ "Lewd": 0.0, "Prompt": "detailed pussy, pubic hair, detailed nipples" }
 		]
 	},
 	"QualityToggle": "very aesthetic, best quality, absurdres, ",
